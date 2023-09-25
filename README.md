@@ -1,3 +1,5 @@
+This project is to experiment using Hadoop to process large amounts of data on a pseudo-distributed node. 
+
 ### line count with map reduce
 1. make sure things can executed on my local desktop:
 cat shakespeare.txt |python3 mapper.py |sort |python3 reducer.py
