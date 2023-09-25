@@ -9,7 +9,8 @@ cd /Users/hanxingsharpayyu/hadoop/hadoop-3.3.0
 hdfs dfs -mkdir /shakespeare
 hdfs dfs -put /Users/../Desktop/.../shakespeare.txt /shakespeare
 
-3. execute mapreduce
+
+4. execute mapreduce
 hadoop jar /Users/.../hadoop/hadoop-3.3.0/share/hadoop/tools/lib/hadoop-streaming-3.3.0.jar \
 -files /Users/hanxingsharpayyu/Desktop/.../wordcount/mapper.py,/Users/../Desktop/.../wordcount/reducer.py \
 -mapper 'python3 mapper.py' \
@@ -17,8 +18,10 @@ hadoop jar /Users/.../hadoop/hadoop-3.3.0/share/hadoop/tools/lib/hadoop-streamin
 -input /shakespeare/shakespeare.txt \
 -output outp/output_shakespeare2
 
-4. cat output file
+5. cat output file
 hdfs dfs -cat /user/.../output_shakespeare/part-00000
+
+this serves as a sanity check to make sure Hadoop is working as it intended.
 
 ### k mean clustering with map reduce
 locally:
